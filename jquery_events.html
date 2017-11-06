@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>jQuery Events</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+       $("p").click(function(){
+           $(this).hide();
+       });
+      $("p").on({
+    mouseenter: function(){
+        $(this).css("background-color", "lightgray");
+    },
+    click: function(){
+          $(this).css("background-color","blue");
+      }
+           
+       
+                 });
+    });
+</script>
+
+</head>
+<body>
+    <p>this is jquery event.</p>
+</body>
+</html>
