@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>jQuery effects</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("p").hide(1000);
+        });
+        
+        $("#show").click(function(){
+            $("p").show(1000);
+        });
+        
+        $("#toggle").click(function(){
+            $("p").toggle(1000);
+        });
+        $("#fade").click(function(){
+            $("p").fadeOut(1000);
+            //you can use fadeIn,FadeOut,FadeToggle(speed,callback)
+        });
+        $("#slide").click(function(){
+            
+            $("p").slideToggle(1000);
+        });
+        
+        //if you want to give animation use .animate({parameters},speed,callback)
+        $("#chaining").click(function(){
+            
+            $("p").hide(1000).show(1000).fade(1000).slide(1000);
+        });
+
+    });
+    
+    
+</script>
+    
+
+</head>
+<body>
+<p>this is jquery effect.</p>
+<button id="hide">hide</button>
+<button id="show">show</button>
+<button id="toggle">toggle</button>
+<button id= "fade">fade</button>
+<button id="slide">slide</button>  
+<button id="chaining">chaining</button>
+</body>
+</html>
